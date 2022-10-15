@@ -23,14 +23,14 @@
             </nav>
         </header>
         <main>
-            <div id="contact-us-hero">
-                <div id="contact-us-hero-box">
+            <div class="contact-us-hero">
+                <div class="contact-us-hero-box">
                     <img id="hero-img" src="images/rafting16_1024.jpg" alt="People enjoying white water rafting">
                 </div>
-                <section id="contact-us-hero-msg">
+                <section class="contact-us-hero-msg">
                     <h1 class="contact-us-home-title">Contact Us</h1>
                 </section>
-                <section id="contact-us-form">
+                <section id="feedback" class="contact-us-form">
                     <form action="#">
                         <div class="form-heading">
                             <h3 class="form-title">Let's chat</h3>
@@ -38,23 +38,23 @@
                         <div class="form-body">
                             <ul class="form-fields">
                                 <li class="field">
-                                    <label class="field-label">Name<span>*</span></label>
+                                    <label class="field-label" for="name">Name<span>*</span></label>
                                     <div><input class="field-input" type="text" value=""
-                                            placeholder="Please enter your name"></div>
+                                            placeholder="Please enter your name" id="name" name="user_name"></div>
                                 </li>
                                 <li class="field">
-                                    <label class="field-label">Email<span>*</span></label>
-                                    <div><input class="field-input" type="text" value=""
-                                            placeholder="Please enter your email"></div>
+                                    <label class="field-label" for="mail">Email<span>*</span></label>
+                                    <div><input class="field-input" type="email" value=""
+                                            placeholder="Please enter your email" id="mail" name="user_email"></div>
                                 </li>
                                 <li class="field">
-                                    <label class="field-label">Phone</label>
-                                    <div><input class="field-input" type="text" value=""
-                                            placeholder="Please enter your phone"></div>
+                                    <label class="field-label" for="phone">Phone</label>
+                                    <div><input class="field-input" type="tel" value=""
+                                            placeholder="Please enter your phone" id="phone" name="user_phone"></div>
                                 </li>
                                 <li class="field">
-                                    <label class="field-label">Comment</label>
-                                    <div><input class="field-input" type="text" value="" placeholder="How can we help?">
+                                    <label class="field-label" for="msg">Comment</label>
+                                    <div><input class="field-input" type="text" value="" placeholder="How can we help?" id="msg" name="user_comment">
                                     </div>
                                 </li>
                             </ul>
@@ -63,8 +63,7 @@
                             <input class="form-submit" type="submit" value="Get Our Attention">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
                                 clip-rule="evenodd">
-                                <path
-                                    d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                                <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
                             </svg>
                         </div>
                     </form>
@@ -92,5 +91,21 @@
     </footer>
     </div>
 </body>
-
+<script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
 </html>
