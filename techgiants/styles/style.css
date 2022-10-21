@@ -4,7 +4,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
 }
 
 .container {
@@ -40,10 +39,31 @@ body {
     color: #fff;
     text-decoration: none;
     position: relative;
+    margin-left: 31px;
+    transition: color 0.25s cubic-bezier(0.56,0.01,0.4,1);
+}
+
+.header-nav-menu li a:after{
+    transition: transform 0.25s;
+    transform-origin: center;
+    transform: scaleX(0);
+    pointer-events: none;
+    content: "";
+    width: 110%;
+    position: absolute;
+    bottom: -2px;
+    left: -5%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.header-nav-menu li a:hover:after {
+    transform: scaleX(1)
 }
 
 .main-menu {
     list-style: none;
+    display: flex;
     flex-direction: row;
     position: relative;
     padding: 0;
@@ -59,6 +79,26 @@ body {
     margin-right: 30px;
     letter-spacing: 1px;
     position: relative;
+    transition: color 0.25s cubic-bezier(0.56,0.01,0.4,1);
+    text-decoration: none;
+}
+
+.phone-number-link span:after {
+    transition: transform 0.25s;
+    transform-origin: center;
+    transform: scaleX(0);
+    pointer-events: none;
+    content: "";
+    width: 110%;
+    position: absolute;
+    bottom: -2px;
+    left: -5%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.phone-number-link span:hover:after {
+    transform: scaleX(1)
 }
 
 .header-button {
@@ -70,9 +110,16 @@ body {
     border: 0.5px solid #fff;
     padding: 15px 25px 14px 25px;
     text-transform: uppercase;
+    transition: all 0.25s cubic-bezier(0.56,0.01,0.4,1);
+}
+
+.header-button:hover {
+    background-color: #fff;
+    color: #12209a;
 }
 
 .hero-banner-img {
-    max-width: 1600px;
-    max-height: 500px;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 80px;
 }
