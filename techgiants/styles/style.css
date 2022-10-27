@@ -136,6 +136,45 @@ body {
     height: 90vh;
 }
 
+.content-carousel {
+    margin-top: 5rem;
+    position: relative;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.carousel-title {
+    margin: 0 0 0.5rem;
+    color: #3646d3;
+    font-size: 60px;
+}
+
+.carousel-slider-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-carousel-slide-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-carousel-slide-text-title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
 .footer {
     background-color: #fff;
 }
