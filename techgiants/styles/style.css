@@ -50,6 +50,17 @@ body {
     font-weight: 900;
 }
 
+.header-services-nav-menu li a{
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    margin-left: 31px;
+    transition: color 0.25s cubic-bezier(0.56,0.01,0.4,1);
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
 .header-nav-menu li a:after{
     transition: transform 0.25s;
     transform-origin: center;
@@ -63,8 +74,25 @@ body {
     height: 2px;
     background-color: #fff;
 }
+.header-services-nav-menu li a:after{
+    transition: transform 0.25s;
+    transform-origin: center;
+    transform: scaleX(0);
+    pointer-events: none;
+    content: "";
+    width: 110%;
+    position: absolute;
+    bottom: -2px;
+    left: -5%;
+    height: 2px;
+    background-color: #000000;
+}
 
 .header-nav-menu li a:hover:after {
+    transform: scaleX(1)
+}
+
+.header-services-nav-menu li a:hover:after {
     transform: scaleX(1)
 }
 
@@ -93,6 +121,18 @@ body {
     font-weight: 900;
 }
 
+.phone-number-link-services {
+    color: #000000;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.25s cubic-bezier(0.56,0.01,0.4,1);
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 900;
+}
+
 .phone-number-link span:after {
     transition: transform 0.25s;
     transform-origin: center;
@@ -107,7 +147,25 @@ body {
     background-color: #fff;
 }
 
+.phone-number-link-services span:after {
+    transition: transform 0.25s;
+    transform-origin: center;
+    transform: scaleX(0);
+    pointer-events: none;
+    content: "";
+    width: 110%;
+    position: absolute;
+    bottom: -2px;
+    left: -5%;
+    height: 2px;
+    background-color: #000000;
+}
+
 .phone-number-link span:hover:after {
+    transform: scaleX(1)
+}
+
+.phone-number-link-services span:hover:after {
     transform: scaleX(1)
 }
 
@@ -126,9 +184,28 @@ body {
     font-weight: 700;
 }
 
+.header-button-services {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #000000;
+    border: 0.5px solid #000000;
+    padding: 15px 25px 14px 25px;
+    text-transform: uppercase;
+    transition: all 0.25s cubic-bezier(0.56,0.01,0.4,1);
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
 .header-button:hover {
     background-color: #fff;
-    color: #3646d3;
+    color: #000000;
+}
+.header-button-services:hover {
+    background-color: #000000;
+    color: #fff;
 }
 
 .hero-banner-img {
