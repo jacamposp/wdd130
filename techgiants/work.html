@@ -12,6 +12,11 @@
 <body>
     <div id="page">
         <header class="header">
+            <a class="header-logo" href="https://jacamposp.github.io/wdd130/techgiants/index.html">
+                <div class="tech-giants-logo">
+                    <img style="height: 80 px; width: 80px;" src="images/giantsLogo.png" alt="tech giants logo">
+                </div>
+            </a>
             <div class="container header-container">
                 <div class="header-nav-menu">
                     <div class="main-menu-container">
@@ -32,6 +37,70 @@
             </div>
         </header>
         <main>
+            <section class="services-header">
+                <div class="services-header-container container">
+                    <h1 class="services-header-title">
+                        <span>Our <strong>Work</strong></span>
+                    </h1>
+                </div>
+            </section>
+            <section class="work-container container">
+                <div class="sidebar">
+                    <div class="sidebar-container">
+                        <div class="sidebar-filter-cat">
+                            <div class="sidebar-filter-cat-title-container">
+                                <p class="sidebar-filter-cat-title">Services</p>
+                                <div class="sidebar-filter-cat-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                                        aria-hidden="true" class="svg-inline--fa fa-chevron-down fa-w-14"
+                                        data-icon="chevron-down" data-prefix="fas" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="sidebar-filter-cat-terms">
+                                <button class="sidebar-filter-cat-term">Advertising</button>
+                                <button class="sidebar-filter-cat-term">Branding</button>
+                                <button class="sidebar-filter-cat-term">Consulting</button>
+                                <button class="sidebar-filter-cat-term">Creative Services</button>
+                                <button class="sidebar-filter-cat-term">Logo Design</button>
+                                <button class="sidebar-filter-cat-term">Marketing</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-grid">
+                    <a href="#" class="work-card work-card--grid">
+                        <div class="work-image">
+                            <img style="width: 530px; height: 380px;" src="images/car-logo.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="work-card work-card--grid">
+                        <div class="work-image">
+                            <img style="width: 530px; height: 380px;"
+                                src="images/dentist-examining-female-patient-with-tools.jpg" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="work-card work-card--grid">
+                        <div class="work-image">
+                            <img style="width: 355px; height: 380px;" src="images/pexels-andre-furtado-1264210.jpg"
+                                alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="work-card work-card--grid">
+                        <div class="work-image">
+                            <img style="width: 355px; height: 380px;" src="images/pexels-eva-bronzini-7661627.jpg"
+                                alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="work-card work-card--grid">
+                        <div class="work-image">
+                            <img style="width: 355px; height: 380px;" src="images/carman.jpg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer-container container">
@@ -120,4 +189,10 @@
         </footer>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready( function () {
+        $(".header").addClass("active");
+});
+</script>
 </html>

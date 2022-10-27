@@ -12,8 +12,13 @@
 <body>
     <div id="page">
         <header class="header">
+            <a class="header-logo" href="index.html">
+                <div class="tech-giants-logo">
+                    <img style="height: 80 px; width: 80px;" src="images/giantsLogo.png" alt="tech giants logo">
+                </div>
+            </a>
             <div class="container header-container">
-                <div class="header-services-nav-menu">
+                <div class="header-nav-menu">
                     <div class="main-menu-container">
                         <ul class="main-menu">
                             <li id="home-item"><a href="index.html">Home</a></li>
@@ -24,10 +29,10 @@
                     </div>
                 </div>
                 <div class="header-nav-cta">
-                    <a href="tel:+506 60377-784" class="phone-number-link-services">
+                    <a href="tel:+506 60377-784" class="phone-number-link">
                         <span>6037-7784</span>
                     </a>
-                    <a target="_self" href="contact-us.html" class="header-button-services"><span>Let's Talk</span></a>
+                    <a target="_self" href="contact-us.html" class="header-button"><span>Let's Talk</span></a>
                 </div>
             </div>
         </header>
@@ -196,5 +201,10 @@
     </div>
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready( function () {
+        $(".header").addClass("active");
+});
+</script>
 </html>

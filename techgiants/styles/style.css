@@ -21,6 +21,28 @@ body {
     position: fixed;
     background-color: transparent;
     padding: 15px;
+    z-index: 900;
+}
+
+.active { 
+    background-color: #fff;
+    color: #3646d3;
+}
+
+.header-logo {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: inline;
+    width: 68px;
+    position: absolute;
+    z-index: 700;
+}
+
+.tech-giants-logo{
+    position: relative;
+    z-index: 2;
+    height: 100%;
 }
 
 .header-container {
@@ -50,9 +72,8 @@ body {
     line-height: 20px;
     font-weight: 900;
 }
-
-.header-services-nav-menu li a{
-    color: #000000;
+.active .header-nav-menu li a{
+    color: #3646d3;
     text-decoration: none;
     position: relative;
     margin-left: 31px;
@@ -75,7 +96,7 @@ body {
     height: 2px;
     background-color: #fff;
 }
-.header-services-nav-menu li a:after{
+.active .header-nav-menu li a:after{
     transition: transform 0.25s;
     transform-origin: center;
     transform: scaleX(0);
@@ -86,14 +107,14 @@ body {
     bottom: -2px;
     left: -5%;
     height: 2px;
-    background-color: #000000;
+    background-color: #3646d3;
 }
 
 .header-nav-menu li a:hover:after {
     transform: scaleX(1)
 }
 
-.header-services-nav-menu li a:hover:after {
+.active .header-nav-menu li a:hover:after {
     transform: scaleX(1)
 }
 
@@ -122,8 +143,8 @@ body {
     font-weight: 900;
 }
 
-.phone-number-link-services {
-    color: #000000;
+.active .phone-number-link {
+    color: #3646d3;
     margin-right: 30px;
     letter-spacing: 1px;
     position: relative;
@@ -148,7 +169,7 @@ body {
     background-color: #fff;
 }
 
-.phone-number-link-services span:after {
+.active .phone-number-link span:after {
     transition: transform 0.25s;
     transform-origin: center;
     transform: scaleX(0);
@@ -159,14 +180,14 @@ body {
     bottom: -2px;
     left: -5%;
     height: 2px;
-    background-color: #000000;
+    background-color: #3646d3;
 }
 
 .phone-number-link span:hover:after {
     transform: scaleX(1)
 }
 
-.phone-number-link-services span:hover:after {
+.active .phone-number-link span:hover:after {
     transform: scaleX(1)
 }
 
@@ -185,13 +206,13 @@ body {
     font-weight: 700;
 }
 
-.header-button-services {
+.active .header-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    color: #000000;
-    border: 0.5px solid #000000;
+    color: #3646d3;
+    border: 0.5px solid #3646d3;
     padding: 15px 25px 14px 25px;
     text-transform: uppercase;
     transition: all 0.25s cubic-bezier(0.56,0.01,0.4,1);
@@ -204,8 +225,8 @@ body {
     background-color: #fff;
     color: #000000;
 }
-.header-button-services:hover {
-    background-color: #000000;
+.active .header-button:hover {
+    background-color: #3646d3;
     color: #fff;
 }
 
@@ -578,3 +599,104 @@ footer .h5{
     transition: all 0.25 ease;
 }
 
+/* work page */ 
+
+.work-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    margin-right: 3rem;
+    width: 210px;
+}
+
+.sidebar-filter-cat {
+    margin-top: 2.3rem;
+}
+
+.sidebar-filter-cat-title-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebar-filter-cat-title {
+    margin: 0;
+    color: #3646d3;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.sidebar-filter-cat-arrow {
+    width: 15px;
+    margin-left: 2rem;
+    position: relative;
+    color: #3646d3;
+}
+
+.sidebar-filter-cat-arrow svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar-filter-cat-terms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.3rem;
+    max-height: auto;
+}
+
+.sidebar-filter-cat-term {
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: color .25s cubic-bezier(.56,.01,.4,1);
+    text-align: left;
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.1em;
+}
+
+.work-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-card--grid:nth-child(-n+2) {
+    width: 49.99995%;
+}
+
+.work-card--grid:nth-child(n+3) {
+    width: 33.33333%;
+}
+
+.work-card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: #fff;
+    opacity: 1;
+}
+
+.work-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
